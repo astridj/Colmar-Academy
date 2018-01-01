@@ -12,8 +12,14 @@ body {
 }
 
 figure,
+h3,
+p,
 section {
   margin: 0;
+}
+
+img {
+  display: block;
 }
 
 ul {
@@ -70,13 +76,11 @@ header {
 }
 
 .enrol figure {
-  height: 50%;
   max-width: 70%;
   padding: 2.5rem 1.5rem;
 }
 
 .enrol-feat-img {
-  display: block;
   width: 100%;
 }
 
@@ -95,4 +99,36 @@ header {
   display: block;
   padding: .5rem 0;
   text-align: center;
+}
+
+/* Events Section Styles */
+.events {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.events article {
+  max-width: 70%;
+}
+
+.events figure {
+  padding: 2.5rem 1.5rem;
+}
+
+.events figcaption {
+  padding: 0 1.5rem 2.5rem 1.5rem;
+}
+
+.events-feat-img {
+  width: 100%;
+}
+
+.events-feat-head,
+.events-feat-copy {
+  padding-bottom: 2rem;
+}
+
+.events aside {
+  max-width: 30%;
 }
