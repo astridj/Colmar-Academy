@@ -12,6 +12,7 @@ body {
 }
 
 figure,
+h2,
 h3,
 h5,
 p,
@@ -79,6 +80,7 @@ header {
 
 /* MAIN SECTION STYLES */
 
+
 /* Enrol Section Styles */
 .enrol {
   align-items: center;
@@ -114,7 +116,9 @@ header {
   text-align: center;
 }
 
+
 /* Events Section Styles */
+
 .events {
   align-items: flex-start;
   display: flex;
@@ -122,7 +126,7 @@ header {
 }
 
 .event-feat {
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
 }
 
 .event-feat-head,
@@ -130,8 +134,7 @@ header {
   padding-bottom: 1.5rem;
 }
 
-.event-feat-img,
-.event-feat figcaption {
+.event-feat-img {
   padding-bottom: 2.5rem;
 }
 
@@ -161,4 +164,17 @@ header {
 .event-descr,
 .event-more {
   padding-bottom: .5rem;
+}
+
+
+/* Faculties Section Styles */
+
+.fac-title {
+  padding: 2rem;
+  text-align: center;
+}
+
+.fac-cards {
+  display: flex;
+  flex-wrap: wrap;
 }
