@@ -1,4 +1,4 @@
-/* GLOBAL STYLES */
+/* 1. GLOBAL STYLES */
 
 html {
   box-sizing: border-box;
@@ -14,6 +14,7 @@ body {
 figure,
 h2,
 h3,
+h4,
 h5,
 h6,
 p,
@@ -21,22 +22,22 @@ section {
   margin: 0;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
 
 ul {
   list-style-type: none;
 }
 
-.feat-copy {
-  padding: 1.5rem;
-  padding-bottom: 0;
+/* 1. a. Global structure styles */
+
+.flex-section {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
 }
 
-.feat-fig {
-  padding: 2.5rem 1.5rem;
+img {
+  display: block;
+  width: 100%;
 }
 
 .main-col {
@@ -51,91 +52,19 @@ ul {
   max-width: 40%;
 }
 
+/* 1. b. Global Main-Column Feature styles */
 
-/* HEADER STYLES */
-
-header {
-  align-items: center;
-  display: flex;
-  height: 4rem;
-  padding: 0 1.5rem;
+.feat-copy {
+  padding-top: 1.5rem;
 }
 
-.logo {
-  flex: 1;
+.feat-fig {
+  padding: 2.5rem 1.5rem;
 }
 
-.logo figure {
-  align-items: center;
-  display: flex;
-}
+/* 1. c. Global Info-Thumbnail Card styles */
 
-.logo img {
-  height: 2.5rem;
-  width: auto;
-}
-
-.logo span {
-  height: 1rem;
-  padding: 0 .5rem;
-}
-
-.main-nav {
-  display: flex;
-  flex: 2;
-  padding: 0;
-}
-
-.nav-btn {
-  padding: 0 .5rem;
-}
-
-
-
-/* MAIN SECTION STYLES */
-
-
-/* Enrol Section Styles */
-.enrol {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.enrol aside {
-  padding-bottom: 10%;
-}
-
-.enrol h1 {
-  max-width: 80%;
-}
-
-.enrol p {
-  padding-bottom: 2rem;
-}
-
-.enrol-btn {
-  background-color: #000;
-  width: 60%;
-}
-
-.enrol-btn a {
-  color: #fff;
-  display: block;
-  padding: .5rem 0;
-  text-align: center;
-}
-
-
-/* Events Section Styles */
-
-.events {
-  align-items: flex-start;
-  display: flex;
-  justify-content: space-between;
-}
-
-.events aside {
+.info {
   padding-top: 1.5rem;
 }
 
@@ -163,8 +92,85 @@ header {
   padding-bottom: .5rem;
 }
 
+/* 1. d. Global navigation styles */
 
-/* Faculties Section Styles */
+
+.nav-wrapper {
+  display: flex;
+  flex: 2;
+  padding: 0;
+}
+
+.nav-btn {
+  padding: 0 .5rem;
+}
+
+
+/* 2. HEADER STYLES */
+
+header {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo figure {
+  align-items: center;
+  display: flex;
+}
+
+.logo img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.logo span {
+  height: 1rem;
+  padding: 0 .5rem;
+}
+
+
+/* 3. MAIN SECTION STYLES */
+
+
+/* 3. a. Enrol Section Styles */
+.enrol {
+  align-items: center;
+}
+
+.enrol aside {
+  padding-bottom: 10%;
+}
+
+.enrol h1 {
+  max-width: 80%;
+}
+
+.enrol p {
+  padding-bottom: 2rem;
+}
+
+.enrol-btn {
+  background-color: #000;
+  width: 60%;
+}
+
+.enrol-btn a {
+  color: #fff;
+  display: block;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+/* 3. b. Events Section Styles */
+/* NB No styles in Events section. */
+
+/* 3. c. Faculties Section Styles */
 
 .fac-cards {
   justify-content: center;
@@ -198,15 +204,22 @@ header {
 }
 
 
-/* Case Studies Section Styles */
+/* 3. d. Case Studies Section Styles */
 
-.case-title {
-  padding: 2rem;
-  text-align: center;
+video {
+  max-width: 100%;
 }
 
-.case-studies {
-  align-items: flex-start;
+
+/* 4. FOOTER SECTION STYLES */
+
+footer {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  height: 4rem;
+  padding: 1rem 1.5rem;
+}
+
+.copyright {
+  flex: 1;
 }
