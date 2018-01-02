@@ -30,10 +30,23 @@ ul {
   list-style-type: none;
 }
 
+.feat-copy {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.feat-fig {
+  padding: 2.5rem 1.5rem;
+}
+
 .main-col {
   max-width: 60%;
 }
 
+.section-title {
+  padding: 2rem;
+  text-align: center;
+}
 .side-col {
   max-width: 40%;
 }
@@ -89,10 +102,6 @@ header {
   justify-content: space-between;
 }
 
-.enrol figure {
-  padding: 2.5rem 1.5rem;
-}
-
 .enrol aside {
   padding-bottom: 10%;
 }
@@ -126,54 +135,36 @@ header {
   justify-content: space-between;
 }
 
-.event-feat {
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
-}
-
-.event-feat-head,
-.event-feat-copy {
-  padding-bottom: 1.5rem;
-}
-
-.event-feat-img {
-  padding-bottom: 2.5rem;
-}
-
 .events aside {
   padding-top: 1.5rem;
 }
 
-.event-card {
+.info-card {
   align-items: center;
   display: flex;
 }
 
-.event-card figure {
+.info-card figure {
   max-width: 35%;
   padding: 1rem;
 }
 
-.event-card img {
+.info-card img {
   height: auto;
 }
 
-.event-name {
+.info-name {
   font-size: 1.25rem;
 }
 
-.event-name,
-.event-descr,
-.event-more {
+.info-name,
+.info-descr,
+.info-more {
   padding-bottom: .5rem;
 }
 
 
 /* Faculties Section Styles */
-
-.fac-title {
-  padding: 2rem;
-  text-align: center;
-}
 
 .fac-cards {
   justify-content: center;
@@ -204,4 +195,18 @@ header {
 .fac-sub {
   padding: .5rem 0;
   text-transform: uppercase;
+}
+
+
+/* Case Studies Section Styles */
+
+.case-title {
+  padding: 2rem;
+  text-align: center;
+}
+
+.case-studies {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
 }
