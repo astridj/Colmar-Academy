@@ -15,6 +15,7 @@ figure,
 h2,
 h3,
 h5,
+h6,
 p,
 section {
   margin: 0;
@@ -175,6 +176,32 @@ header {
 }
 
 .fac-cards {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 3.75rem 1rem 3.75rem;
+}
+
+.fac-card {
+  background-color: #c3c3c3;
+  max-width: 30%;
+  margin: 0 .75rem 1rem .75rem;
+}
+
+.fac-card img {
+  height: auto;
+}
+
+.fac-info {
+  padding: 1.5rem;
+}
+
+.fac-head {
+  font-size: 1rem;
+  padding-bottom: .2rem;
+}
+
+.fac-sub {
+  padding: .5rem 0;
+  text-transform: uppercase;
 }
