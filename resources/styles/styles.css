@@ -8,11 +8,12 @@ html {
 }
 
 body {
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 figure,
 h3,
+h5,
 p,
 section {
   margin: 0;
@@ -20,10 +21,15 @@ section {
 
 img {
   display: block;
+  width: 100%;
 }
 
 ul {
   list-style-type: none;
+}
+
+.main-col {
+  width: 60%;
 }
 
 
@@ -47,6 +53,7 @@ header {
 
 .logo img {
   height: 2.5rem;
+  width: auto;
 }
 
 .logo span {
@@ -76,17 +83,20 @@ header {
 }
 
 .enrol figure {
-  max-width: 70%;
   padding: 2.5rem 1.5rem;
 }
 
-.enrol-feat-img {
-  width: 100%;
+.enrol aside {
+  max-width: 40%;
+  padding-bottom: 10%;
 }
 
-.enrol aside {
-  max-width: 30%;
-  padding-bottom: 15%;
+.enrol h1 {
+  max-width: 80%;
+}
+
+.enrol p {
+  padding-bottom: 2rem;
 }
 
 .enrol-btn {
@@ -103,32 +113,50 @@ header {
 
 /* Events Section Styles */
 .events {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
 }
 
-.events article {
-  max-width: 70%;
-}
-
-.events figure {
+.event-feat {
   padding: 2.5rem 1.5rem;
 }
 
-.events figcaption {
-  padding: 0 1.5rem 2.5rem 1.5rem;
+.event-feat-head,
+.event-feat-copy {
+  padding-bottom: 1.5rem;
 }
 
-.events-feat-img {
-  width: 100%;
-}
-
-.events-feat-head,
-.events-feat-copy {
-  padding-bottom: 2rem;
+.event-feat-img,
+.event-feat figcaption {
+  padding-bottom: 2.5rem;
 }
 
 .events aside {
-  max-width: 30%;
+  max-width: 40%;
+  padding-top: 1.5rem;
+}
+
+.event-card {
+  align-items: center;
+  display: flex;
+}
+
+.event-card figure {
+  max-width: 35%;
+  padding: 1rem;
+}
+
+.event-card img {
+  height: auto;
+}
+
+.event-name {
+  font-size: 1.25rem;
+}
+
+.event-name,
+.event-descr,
+.event-more {
+  padding-bottom: .5rem;
 }
