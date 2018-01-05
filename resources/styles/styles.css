@@ -21,10 +21,20 @@ h6, p {
 }
 
 h3 {
+  color: hsl(211.8, 61.9%, 85%);
   font-family: "Alegreya", Georgia, serif;
   font-weight: 400;
   font-size: 2rem;
   letter-spacing: .01rem;
+}
+
+h4 {
+  color: hsl(211.8, 61.9%, 45%);
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -48,12 +58,12 @@ ul {
 
 header,
 section:nth-of-type(2n+2) {
-  color: #fff;
-  background-color: #00356b;
+  color: hsl(211.8, 81.9%, 95%);
+  background-color: hsl(210.3, 100%, 21%);
 }
 
 .enrol, .faculties {
-  color: #0f4f97;
+  color: hsl(211.8, 81.9%, 32.5%);
 }
 
 /* 1. a. Global structure styles */
@@ -70,15 +80,19 @@ img {
 }
 
 .main-col {
-  max-width: 60%;
+  width: 60%;
 }
 
 .section-title {
+  font-family: "Alegreya", Georgia, serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 100;
   padding: 2rem;
   text-align: center;
 }
 .side-col {
-  max-width: 40%;
+  width: 40%;
 }
 
 /* 1. b. Global Main-Column Feature styles */
@@ -94,11 +108,13 @@ img {
 /* 1. c. Global Info-Thumbnail Card styles */
 
 .info {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
 }
 
 .info-card {
   align-items: center;
+  background-color: hsl(211.8, 81.9%, 95%);
+  border-bottom: 3px solid hsl(210.3, 100%, 21%);
   display: flex;
 }
 
@@ -111,8 +127,8 @@ img {
   height: auto;
 }
 
-.info-name {
-  font-size: 1.25rem;
+.info-card figcaption {
+  width: 50%;
 }
 
 .info-name,
@@ -121,17 +137,60 @@ img {
   padding-bottom: .5rem;
 }
 
+.info-name {
+  font-size: 1.25rem;
+  color: hsl(210.3, 100%, 30%);
+}
+
+.info-descr {
+  color: hsl(210.3, 100%, 30%);
+  font-size: .8rem;
+}
+
+.info-more {
+  color: hsl(210.3, 50%, 60%);
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+}
+
 /* 1. d. Global navigation styles */
 
+/* Compensate for fixed header height */
+main,
+footer {
+  position: relative;
+  top: 4rem;
+}
 
 .nav-wrapper {
   display: flex;
   flex: 2;
-  padding: 0;
+  padding-right: 2rem;
 }
 
 .nav-btn {
   padding: 0 .5rem;
+}
+
+/* All GLOBAL Media Query Styles */
+@media only screen and (max-width: 850px) {
+  .flex-section {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .feat-fig,
+  .side-col {
+    width: 100%;
+  }
+
+  .feat-fig {
+    padding-top: 0;
+  }
 }
 
 
@@ -142,14 +201,14 @@ header {
   border-bottom: 1px solid white;
   display: flex;
   height: 4rem;
-  padding: 0 2.5rem;
   position: fixed;
-  width: 94%;
-  z-index: 5;
+  width: 100%;
+  z-index: 2;
 }
 
 .logo {
   flex: 1;
+  padding-left: 2.5rem;
 }
 
 .logo figure {
@@ -170,6 +229,7 @@ header {
 }
 
 .colmar {
+  color: #fff;
   font-family: "Alegreya", Georgia, serif;
   font-size: 2rem;
   font-weight: 400;
@@ -178,6 +238,7 @@ header {
 }
 
 .academy {
+  color: #fff;
   font-weight: 700;
   letter-spacing: .2rem;
   text-transform: uppercase;
@@ -190,13 +251,28 @@ header {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 900px) {
+  .logo img {
+    height: 2rem;
+  }
+
+  .logo div {
+    font-size: 1.25rem;
+    height: 1.75rem;
+  }
+
+  .colmar {
+    font-size: 1.35rem;
+  }
+
+  .nav-btn a {
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: .15rem;
+  }
+}
 
 /* 3. MAIN SECTION STYLES */
-
-main {
-  position: relative;
-  top: 4rem;
-}
 
 /* 3. a. Enrol Section Styles */
 .enrol {
@@ -204,7 +280,8 @@ main {
 }
 
 .enrol aside {
-  padding-bottom: 10%;
+  position: relative;
+  bottom: 10%;
 }
 
 .enrol h1 {
@@ -220,14 +297,14 @@ h1 span {
 }
 
 .enrol p {
-  color: #00356b;
+  color: hsl(210.3, 100%, 21%);
   font-size: 1.25rem;
   max-width: 80%;
   padding-bottom: 2rem;
 }
 
 .enrol-btn {
-  background-color: #0f4f97;
+  background-color: hsl(211.8, 70%, 45%);
   height: auto;
   width: 50%;
 }
@@ -236,18 +313,79 @@ h1 span {
   color: #fff;
   display: block;
   font-size: 1.25rem;
-  letter-spacing: .2rem;
-  padding: 1.5rem;
+  letter-spacing: .15rem;
+  padding: 1.25rem;
   text-align: center;
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1100px) {
+  .enrol {
+    align-items: flex-end;
+  }
+
+  .enrol aside {
+    padding-bottom: 2.5rem;
+    position: static;
+  }
+
+  .enrol h1 {
+    font-size: 3rem;
+    line-height: .95;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .enrol p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .enrol-btn a {
+    font-size: .75rem;
+    padding: .95rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .enrol {
+    align-items: center;
+  }
+
+  .enrol aside {
+    padding-bottom: 2rem;
+    width: 90%;
+  }
+
+  .enrol-btn {
+    width: 30%;
+  }
+
+  figure .desktop {
+    display: none;
+  }
+
+  figure .mobile {
+    display: block;
+  }
+}
+
 /* 3. b. Events Section Styles */
+
 .citation {
   font-family: "Alegreya", Georgia, serif;
   font-weight: 400;
   font-size: 1rem;
   font-style: italic;
+}
+
+@media only screen and (max-width: 850px) {
+
+  .events figcaption {
+    margin: auto;
+    width: 90%;
+  }
 }
 
 /* 3. c. Faculties Section Styles */
@@ -260,7 +398,7 @@ h1 span {
 }
 
 .fac-card {
-  background-color: #c3c3c3;
+  background-color: hsl(211.8, 40%, 80%);
   max-width: 30%;
   margin: 0 .75rem 1rem .75rem;
 }
@@ -274,27 +412,87 @@ h1 span {
 }
 
 .fac-head {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
   padding-bottom: .2rem;
 }
 
 .fac-sub {
-  padding: .5rem 0;
+  color: hsl(211.8, 81.9%, 95%);
+  letter-spacing: .05rem;
+  padding-bottom: .5rem;
   text-transform: uppercase;
 }
 
+.fac-descr {
+  color: hsl(211.8, 61.9%, 45%);
+  font-size: .9rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .fac-cards {
+    margin: 0 1.75rem 1rem 1.75rem;
+  }
+
+  .fac-card {
+    margin: 0 .5rem 1rem .5rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .fac-cards {
+    margin: 0 auto 1rem auto;
+    padding: 0;
+  }
+
+  .fac-card {
+    margin: 0 .35rem 1rem .35rem;
+    max-width: 30%;
+  }
+}
 
 /* 3. d. Case Studies Section Styles */
 
+.case-studies .section-title {
+  padding-bottom: 0;
+}
+
+.case-studies .info {
+  padding-bottom: 2rem;
+}
+
+.case-studies h5 {
+  color: hsl(211.8, 61.9%, 65%);
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
 video {
   max-width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .case-studies img {
+    width: 60%;
+  }
+
+  .case-studies h5 {
+    font-size: 1rem;
+  }
+
+  .case-studies p {
+    font-size: 1rem;
+  }
 }
 
 
 /* 4. FOOTER SECTION STYLES */
 
 footer {
-  color: #0f4f97;
+  color: hsl(211.8, 81.9%, 32.5%);
   align-items: center;
   display: flex;
   height: 4rem;
@@ -302,7 +500,7 @@ footer {
 }
 
 .footer a {
-  color: #0f4f97;
+  color: hsl(211.8, 81.9%, 32.5%);
   font-weight: bolder;
 }
 
