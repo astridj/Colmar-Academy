@@ -83,6 +83,10 @@ img {
   width: 60%;
 }
 
+.mobile {
+  display: none;
+}
+
 .section-title {
   font-family: "Alegreya", Georgia, serif;
   font-size: 2.5rem;
@@ -169,6 +173,7 @@ footer {
   display: flex;
   flex: 2;
   padding-right: 2rem;
+  padding-left: 0;
 }
 
 .nav-btn {
@@ -190,6 +195,29 @@ footer {
 
   .feat-fig {
     padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .info-card {
+    background-color: hsl(210.3, 100%, 21%);
+    border-bottom: 3px solid hsl(211.8, 81.9%, 95%);
+    flex-direction: column;
+  }
+
+  .info-card figure {
+    max-width: 100%;
+  }
+
+  .info-card figcaption {
+    padding-bottom: 1.5rem;
+  }
+
+  .info-name,
+  .info-descr {
+    color: #fff;
   }
 }
 
@@ -216,9 +244,14 @@ header {
   display: flex;
 }
 
-.logo img {
+svg {
+  fill: #fff;
   height: 3rem;
   width: auto;
+}
+
+.logo a {
+  height: 3rem;
 }
 
 .logo div {
@@ -252,7 +285,8 @@ header {
 }
 
 @media only screen and (max-width: 900px) {
-  .logo img {
+  .logo a,
+  svg {
     height: 2rem;
   }
 
@@ -269,6 +303,26 @@ header {
     font-size: .75rem;
     font-weight: 400;
     letter-spacing: .15rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .logo .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  div.logo,
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: flex;
+    margin: auto;
+    padding-right: 0;
+    width: 100%;
   }
 }
 
@@ -362,12 +416,32 @@ h1 span {
     width: 30%;
   }
 
-  figure .desktop {
+  .events figure .desktop {
     display: none;
   }
 
-  figure .mobile {
+  .events figure .mobile {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .enrol h1 {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .enrol h1 {
+    max-width: 90%;
+  }
+
+  .enrol p {
+    font-size: 1.25rem;
+  }
+
+  .enrol-btn {
+    width: 100%;
   }
 }
 
@@ -381,10 +455,19 @@ h1 span {
 }
 
 @media only screen and (max-width: 850px) {
-
   .events figcaption {
     margin: auto;
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .events .feat-fig {
+    display: none;
+  }
+
+  .events aside {
+    padding-top: 0;
   }
 }
 
@@ -449,6 +532,47 @@ h1 span {
     margin: 0 .35rem 1rem .35rem;
     max-width: 30%;
   }
+
+  .fac-info {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .fac-cards {
+    flex: column;
+  }
+
+  .fac-card {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-title {
+    padding-bottom: 1rem;
+  }
+
+  .fac-cards {
+    align-items: center;
+    display: flex;
+    padding-bottom: .1rem; /*Hack to achieve ca. 2rem bottom padding*/
+  }
+
+  .fac-card {
+    min-width: 100%;
+    margin: 0 1rem .5rem 1rem;
+  }
+
+  .fac-card figcaption {
+    /* width: 100%; */
+  }
+
+  .fac-card figure,
+  .fac-sub,
+  .fac-descr {
+    display: none;
+  }
 }
 
 /* 3. d. Case Studies Section Styles */
@@ -488,6 +612,31 @@ video {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .case-studies .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .case-studies,
+  .case-studies article {
+    padding: 0;
+  }
+
+  .case-studies .section-title {
+    padding-bottom: 1rem;
+  }
+
+  .case-studies video {
+    border-bottom: 1px solid navy;
+    display: block;
+  }
+
+  .case-studies .feat-copy {
+    display: none;
+  }
+}
 
 /* 4. FOOTER SECTION STYLES */
 
@@ -506,4 +655,13 @@ footer {
 
 .copyright {
   flex: 1;
+}
+
+@media only screen and (max-width: 560px) {
+  .copyright {
+    text-align: center;
+  }
+  footer .desktop {
+    display: none;
+  }
 }
