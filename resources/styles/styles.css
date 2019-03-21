@@ -5,30 +5,6 @@
 
 /* 1. a. General styles */
 
-.Aligner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Aligner-item {
-  max-width: 60%;
-}
-
-.Aligner-item img {
-  max-width: 40%;
-  margin: auto;
-}
-
-.Aligner-item--bottom {
-  align-self: flex-end;
-}
-
-.center-thumb {
-  max-width: 15%;
-  margin: auto;
-}
-
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -67,13 +43,14 @@ ul {
   list-style-type: none;
 }
 
-header {
-  color: #fff;
-  background-color: hsl(192, 91%, 18%);
+header,
+section:nth-of-type(2n+2) {
+  color: hsl(211.8, 81.9%, 95%);
+  background-color: hsl(210.3, 100%, 21%);
 }
 
-.enrol, .introducion {
-  color: #000;
+.enrol, .faculties {
+  color: hsl(211.8, 81.9%, 32.5%);
 }
 
 .flex-section {
@@ -97,10 +74,13 @@ header {
 }
 
 .section-title {
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
-  font-size: 5rem;
+  font-family: "Alegreya", Georgia, serif;
+  font-size: 40px;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 100;
+  padding: 32px;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -113,7 +93,7 @@ header {
 
 h3 {
   color: hsl(211.8, 61.9%, 85%);
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
+  font-family: "Alegreya", Georgia, serif;
   font-weight: 400;
   font-size: 32px;
   font-size: 2rem;
@@ -146,7 +126,7 @@ h4 {
 }
 
 h5 {
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
+  font-family: "Alegreya", Georgia, serif;
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
@@ -255,7 +235,6 @@ footer {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  margin: auto;
   padding-right: 32px;
   padding-right: 2rem;
   padding-left: 0;
@@ -266,18 +245,7 @@ footer {
   padding: 0 .65rem;
 }
 
-.gold {
-  fill: #85754E;
-}
 
-.white {
-  fill: #FFFFFF;
-}
-
-.white-line {
-  fill: none;
-  stroke:#FFFFFF;
-}
 
 /*
 ------2. HEADER SECTION STYLES------
@@ -345,11 +313,29 @@ svg:hover {
   padding: 0 .5rem;
 }
 
+.colmar {
+  color: #fff;
+  font-family: "Alegreya", Georgia, serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.academy {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
 .nav-btn a {
   border-bottom: 1px solid transparent;
   font-weight: 100;
   letter-spacing: 1.6px;
-  letter-spacing: 0.2rem;
+  letter-spacing: .1rem;
   color: #fff;
   padding-bottom: 4.8px;
   padding-bottom: .3rem;
@@ -362,27 +348,7 @@ svg:hover {
   border-color: white;
 }
 
-.AnnieSloancom {
-  color: #fff;
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
-  font-style: italic;
-  text-transform: none;
-  letter-spacing: 0;
-}
 
-.hero {
-  background-image: url(../images/bk-img.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 160vh;
-}
-
-.vertical-center {
-  margin: auto;
-  padding: auto;
-  position: relative;
-  text-anchor: middle;
-}
 /*
 ----------3. MAIN SECTION STYLES----------
 */
@@ -403,13 +369,12 @@ svg:hover {
 }
 
 .enrol h1 {
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
+  font-family: "Alegreya", Georgia, serif;
   font-weight: lighter;
   font-size: 56px;
   font-size: 3.5rem;
   line-height: 1;
   max-width: 80%;
-  text-align: center;
 }
 
 h1 span {
@@ -425,7 +390,7 @@ h1 span {
   padding-bottom: 2rem;
 }
 
-.scroll-btn {
+.enrol-btn {
   background-color: hsl(211.8, 70%, 45%);
   border: 1px solid white;
   height: auto;
@@ -434,12 +399,12 @@ h1 span {
   width: 50%;
 }
 
-.scroll-btn:hover {
+.enrol-btn:hover {
   border: 1px solid hsl(211.8, 70%, 45%);
   background-color: hsl(211.8, 81.9%, 95%);
 }
 
-.scroll-btn a {
+.enrol-btn a {
   color: #fff;
   display: block;
   font-size: 20px;
@@ -452,28 +417,28 @@ h1 span {
   text-transform: uppercase;
 }
 
-.scroll-btn a:hover {
+.enrol-btn a:hover {
   color: hsl(211.8, 70%, 35%);
   font-weight: bolder;
 }
 
 
-/* 3. b. Welcome Section Styles */
+/* 3. b. Events Section Styles */
 
-.welcome .feat {
+.events .feat {
   -webkit-transition: -webkit-transform .35s ease-out;
   transition: -webkit-transform .35s ease-out;
   transition: transform .35s ease-out;
   transition: transform .35s ease-out, -webkit-transform .35s ease-out;
 }
 
-.welcome .feat-fig .feat:hover {
+.events .feat-fig .feat:hover {
   -webkit-transform: translateY(-.25rem);
           transform: translateY(-.25rem);
 }
 
 .citation {
-  font-family: ltc-bodoni-175, "Palatino", "Bookman Old Style", serif;
+  font-family: "Alegreya", Georgia, serif;
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
@@ -481,9 +446,9 @@ h1 span {
 }
 
 
-/* 3. c. Introduction Section Styles */
+/* 3. c. Faculties Section Styles */
 
-.intro-cards {
+.fac-cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -496,14 +461,14 @@ h1 span {
   margin: 0 3.75rem 1rem 3.75rem;
 }
 
-.intro-card {
+.fac-card {
   background-color: hsl(211.8, 40%, 80%);
   max-width: 30%;
   margin: 0 12px 16px 12px;
   margin: 0 .75rem 1rem .75rem;
 }
 
-.introduction .intro-info {
+.faculties .fac-info {
   background-color: hsl(211.8, 40%, 80%);
   -webkit-transition: -webkit-transform .35s ease-out;
   transition: -webkit-transform .35s ease-out;
@@ -511,21 +476,21 @@ h1 span {
   transition: transform .35s ease-out, -webkit-transform .35s ease-out;
 }
 
-.introduction .intro-info:hover {
+.faculties .fac-info:hover {
   -webkit-transform: translateY(-.5rem);
           transform: translateY(-.5rem);
 }
 
-.intro-card img {
+.fac-card img {
   height: auto;
 }
 
-.intro-info {
+.fac-info {
   padding: 24px;
   padding: 1.5rem;
 }
 
-.intro-head {
+.fac-head {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -533,7 +498,7 @@ h1 span {
   padding-bottom: .2rem;
 }
 
-.intro-sub {
+.fac-sub {
   color: hsl(211.8, 81.9%, 95%);
   letter-spacing: 0.8px;
   letter-spacing: .05rem;
@@ -542,7 +507,7 @@ h1 span {
   text-transform: uppercase;
 }
 
-.intro-descr {
+.fac-descr {
   color: hsl(211.8, 61.9%, 45%);
   font-size: 14.4px;
   font-size: .9rem;
@@ -663,17 +628,17 @@ footer {
     max-width: 100%;
   }
 
-  .scroll-btn a {
+  .enrol-btn a {
     font-size: .75rem;
     padding: .95rem;
   }
 
-  /*--Introduction Section--*/
-  .intro-cards {
+  /*--Faculties Section--*/
+  .fac-cards {
     margin: 0 1.75rem 1rem 1.75rem;
   }
 
-  .intro-card {
+  .fac-card {
     margin: 0 .5rem 1rem .5rem;
   }
 }
@@ -737,36 +702,36 @@ footer {
     width: 90%;
   }
 
-  .scroll-btn {
+  .enrol-btn {
     width: 30%;
   }
 
-  /*--Welcome Section--*/
-  .welcome figure .desktop {
+  /*--Events Section--*/
+  .events figure .desktop {
     display: none;
   }
 
-  .welcome figure .mobile {
+  .events figure .mobile {
     display: block;
   }
 
-  .welcome .feat {
+  .events .feat {
     margin: auto;
     width: 90%;
   }
 
-  /*--Introduction Section--*/
-  .intro-cards {
+  /*--Faculties Section--*/
+  .fac-cards {
     margin: 0 auto 1rem auto;
     padding: 0;
   }
 
-  .intro-card {
+  .fac-card {
     margin: 0 .35rem 1rem .35rem;
     max-width: 30%;
   }
 
-  .intro-info {
+  .fac-info {
     padding: 1rem;
   }
 
@@ -798,14 +763,14 @@ footer {
 
 
 @media only screen and (max-width: 650px) {
-  /*--Introduction Section--*/
-  .intro-cards {
+  /*--Faculties Section--*/
+  .fac-cards {
     -webkit-box-flex: column;
         -ms-flex: column;
             flex: column;
   }
 
-  .intro-card {
+  .fac-card {
     max-width: 45%;
   }
 
@@ -881,26 +846,25 @@ footer {
     font-size: 1.25rem;
   }
 
-  .scroll-btn {
+  .enrol-btn {
     width: 100%;
   }
 
-  /*--Welcome Section--*/
-  .welcome .feat-fig {
+  /*--Events Section--*/
+  .events .feat-fig {
     display: none;
   }
 
-  .welcome aside {
+  .events aside {
     padding-top: 0;
   }
 
   .section-title {
     padding-bottom: 1rem;
-    text-align: center;
   }
 
-  /*--Introduction Section--*/
-  .intro-cards {
+  /*--Faculties Section--*/
+  .fac-cards {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -910,14 +874,14 @@ footer {
     padding-bottom: .1rem; /*Hack to achieve ca. 2rem bottom padding*/
   }
 
-  .intro-card {
+  .fac-card {
     min-width: 100%;
     margin: 0 1rem .5rem 1rem;
   }
 
-  .intro-card figure,
-  .intro-sub,
-  .intro-descr {
+  .fac-card figure,
+  .fac-sub,
+  .fac-descr {
     display: none;
   }
 
